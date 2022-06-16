@@ -1,13 +1,11 @@
-# -*- coding: utf-8 -*-
+
 from odoo import models
 
 
 class AccountEdiFormat(models.Model):
     _inherit = 'account.edi.format'
 
-    # -------------------------------------------------------------------------
-    # Helpers
-    # -------------------------------------------------------------------------
+    
 
     def _get_proxy_user(self, company):
         '''Returns the proxy_user associated with this edi format.
