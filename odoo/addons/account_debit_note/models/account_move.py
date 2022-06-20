@@ -7,7 +7,7 @@ class AccountMove(models.Model):
     debit_origin_id = fields.Many2one('account.move', 'Original Invoice Debited', readonly=True, copy=False)
     debit_note_ids = fields.One2many('account.move', 'debit_origin_id', 'Debit Notes',
                                      help="The debit notes created for this invoice")
-    debit_note_count = fields.Integer('Number of Debit Notes', compute='_compute_debit_count')
+    debit_note_count1 = fields.Integer('Number of Debit Notes', compute='_compute_debit_count')
 
     @api.depends('debit_note_ids')
     def _compute_debit_count(self):
